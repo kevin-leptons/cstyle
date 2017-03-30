@@ -28,7 +28,8 @@ Specification was built to PDF format and putted to [dist](dist/)
 
 ```bash
 # all of instruction below are affected by Debian-like system
-# if your system isn't Debian-like, use other package manager commands
+# if your system isn't Debian-like, use other package manager and suitable
+# packages
 
 # install tools
 apt-get install texlive texlive-xetex evince
