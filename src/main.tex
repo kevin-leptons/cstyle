@@ -1,0 +1,42 @@
+\documentclass[11pt,twoside,a4paper]{book}
+\usepackage[]{hyperref}
+\usepackage{bookmark}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{parskip}
+
+\setlength{\parindent}{0pt}
+\graphicspath{{../src/}}
+\hypersetup{
+    hidelinks,
+    bookmarksnumbered=true,
+    bookmarksopen=true,
+    bookmarksopenlevel=1
+}
+
+\title{C standard coding style}
+\author{Kevin Leptons}
+\date{\today}
+
+\begin{document}
+\includegraphics{img/cstyle.png}
+\maketitle
+\tableofcontents
+
+\include{chapter-language}
+\include{chapter-documents}
+\include{chapter-libraries}
+\include{chapter-command-programs}
+\include{chapter-gui-programs}
+\include{chapter-files}
+\include{chapter-comments}
+\include{chapter-names}
+\include{chapter-preprocessors}
+\include{chapter-data-structures}
+\include{chapter-declares}
+\include{chapter-functions}
+\include{chapter-statements}
+
+\include{references}
+
+\end{document}
