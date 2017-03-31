@@ -33,7 +33,9 @@ repo_build()
     cd $SRC
 
     # build pdf
-    pdflatex -jobname $DOC_NAME -output-directory $DEST $SRC/main.tex
+    xelatex -jobname $DOC_NAME -output-directory $DEST $SRC/main.tex \
+        -halt-on-error
+
 }
 
 repo_resource()

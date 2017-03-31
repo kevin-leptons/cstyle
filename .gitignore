@@ -1,4 +1,5 @@
 dest/
 pack/
 tmp/
+.log
 *.swp
