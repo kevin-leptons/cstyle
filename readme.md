@@ -49,11 +49,16 @@ cd cstyle
 # if modify image "src/img/*.svg", re-generate images
 ./ctl resource
 
-# build and view result
+# build then view result
+./ctl run
+
+# or only build
 # files in various format are builds
 # put in 'dest'
 ./ctl build
-evince dest/cstyle.pdf
+
+# or only view result
+./ctl view
 
 # distribute
 # files in various format are compress
