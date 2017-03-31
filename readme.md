@@ -4,10 +4,11 @@ One direction guide for C language coding
 
 Kevin Leptons <kevin.leptons@gmail.com> <br>
 March, 2017
+CC by 4.0 License
 
 ![cstyle](src/img/cstyle-64.png)
 
-# DESCRIPTION
+# DESCRIPTIONS
 
 Cstyle provide only-instruction per problem of C language coding. In there,
 not thing which called should, should not, exception or some things like that.
@@ -24,7 +25,7 @@ And benefits are
 
 Specification was built to PDF format and putted to [dist](dist/)
 
-# DEVELOP
+# DEVELOPMENTS
 
 ```bash
 # all of instruction below are affected by Debian-like system

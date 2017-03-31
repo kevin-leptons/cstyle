@@ -29,45 +29,49 @@
 \title{C standard coding style}
 \author{Kevin Leptons}
 \date{\today}
+\newcommand{\licence}{CC by 4.0 License}
 \makeatletter
 
-\begin{document}
-
-% cover
-\clearpage
-\thispagestyle{empty}
+% make new title
+\renewcommand{\maketitle}{
 \begin{center}
-\Huge\@title
-
-\@author
-
-\@date
-
-\includegraphics[width=1.5in]{img/cstyle.png}
+    \thispagestyle{empty}
+    \Huge\MakeUppercase{\textbf{\@title}}\\
+    \vspace{64pt}\LARGE\@author\\
+    \vspace{26pt}\@date\\
+    \licence\\
+    \begin{figure*}[!b]
+        \begin{center}
+            \includegraphics[width=0.64\textwidth]{img/cstyle.png}
+        \end{center}
+    \end{figure*}
 \end{center}
+}
 
-\frontmatter
-\maketitle
-\tableofcontents
+\begin{document}
+    \frontmatter
+        \maketitle
+        \tableofcontents
 
-\mainmatter
-\include{chapter-language}
-\include{chapter-documents}
-\include{chapter-libraries}
-\include{chapter-command-programs}
-\include{chapter-gui-programs}
-\include{chapter-files}
-\include{chapter-comments}
-\include{chapter-names}
-\include{chapter-preprocessors}
-\include{chapter-data-structures}
-\include{chapter-declares}
-\include{chapter-functions}
-\include{chapter-statements}
+    \mainmatter
+        \include{chapter-language}
+        \include{chapter-documents}
+        \include{chapter-libraries}
+        \include{chapter-command-programs}
+        \include{chapter-gui-programs}
+        \include{chapter-files}
+        \include{chapter-comments}
+        \include{chapter-names}
+        \include{chapter-preprocessors}
+        \include{chapter-data-structures}
+        \include{chapter-declares}
+        \include{chapter-functions}
+        \include{chapter-statements}
 
-\appendix
+    \appendix
+        Not thing here
 
-\backmatter
-\include{references}
+    \backmatter
+        \include{references}
 
 \end{document}
