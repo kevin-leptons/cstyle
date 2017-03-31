@@ -15,6 +15,7 @@ DIST="$ROOT/dist"
 PACK="$ROOT/pack"
 DOC_NAME="cstyle"
 PACKAGE="$DOC_NAME-$VERSION"
+DEST_PDF="$DEST/$DOC_NAME.pdf"
 
 # help menu
 HELP="USAGE:\n
@@ -35,7 +36,22 @@ repo_build()
     # build pdf
     xelatex -jobname $DOC_NAME -output-directory $DEST $SRC/main.tex \
         -halt-on-error
+}
 
+repo_run()
+{
+    repo_build
+    evince $DEST_PDF
+}
+
+repo_view()
+{
+    if [ -f $DEST_PDF ]; then
+        evince $DEST_PDF
+    else
+        echo "Building wasn't performed"
+        echo "Hint: $0 build"
+    fi
 }
 
 repo_resource()
@@ -94,6 +110,8 @@ show_help()
 
 # parse arguments
 case "$1" in
+    view) repo_view; exit 0;;
+    run) repo_run; exit 0;;
     resource) repo_resource; exit 0;;
     build) repo_build; exit 0;;
     dist) repo_dist; exit 0;;

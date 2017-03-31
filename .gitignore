@@ -1,5 +1,5 @@
 dest/
 pack/
 tmp/
-.log
+*.log
 *.swp

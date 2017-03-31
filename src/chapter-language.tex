@@ -20,3 +20,21 @@ possibility to add comments? The answer is straightforward: commented text is
 interpreted by the compiler just like verbatim text, the only difference is
 that verbatim text is introduced within the document, while the comment is just
 dropped.
+
+
+床前明月光，疑是地上霜。举头望明月，低头思故乡。
+
+The hyphenation hints are stored for the language that is active when the hyphenation
+command occurs. This means that if you place a hyphenation command into the preamble of
+your document it will influence the English language hyphenation. If you place the command
+after the and you are using some package for national language support
+like babel, then the hyphenation hints will be active in the language activated through babel.
+The example below will allow “hyphenation” to be hyphenated as well as “Hyphenation”,
+and it prevents "FORTRAN", “Fortran” and “fortran” from being hyphenated at all. No
+special characters or symbols are allowed in the argument. Example:
+
+Early life and education[edit]
+Knisely was born and raised in Pennsylvania. He graduated with a Bachelor of Science degree from Franklin and Marshall College in Lancaster, Pennsylvania, then went on to do graduate work at the University of Delaware. While a graduate student in Physics and Astronomy at Delaware, he decided to study for the priesthood, going on to Yale University's Berkeley Divinity School. In 1991, he completed his Masters of Divinity and was ordained to the diaconate in Delaware, and, in the following year, to the priesthood. In 2013, he received an Honorary Doctor of Divinity degree, from Berkeley Divinity School at Yale.[1]
+Ministry[edit]
+Nicholas served initially as a priest in Delaware, Western and Eastern Pennsylvania, before becoming dean of the Episcopal cathedral in Phoenix, Arizona. While a priest in Bethlehem, Pennsylvania, he also taught physics and astronomy at Lehigh University. In his clerical duties, he was active in ministries that focused on homelessness, communications, college and youth, finance, and ecumenical relations.[2]
+Knisely was the first person to chair the General Convention Standing Commission on Communications and Technology. Additionally, he participated in the Moravian-Episcopal dialog that drew up the agreement on full communion between the two denominations.[3]

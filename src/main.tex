@@ -1,21 +1,32 @@
-\documentclass[]{book}
+\documentclass{book}
 \usepackage[a4paper]{geometry}
 \usepackage[]{hyperref}
 \usepackage{bookmark}
 \usepackage{graphicx}
 \usepackage{listings}
 \usepackage{parskip}
-\usepackage{microtype}
 \usepackage{fontspec}
+\usepackage{microtype}
+\usepackage{xeCJK}
+
+% disable hyphens
+\tolerance=10000
+\hyphenpenalty=10000
 
 \setmainfont[
     Path=fonts/,
-    UprightFont= *-regular,
     Extension=.ttf,
+    UprightFont=*-regular,
     BoldFont=*-bold,
     ItalicFont=*-italic,
     BoldItalicFont=*-bold-italic
 ]{dejavu-sans-mono}
+\setCJKmainfont[
+    Path=fonts/,
+    Extension=.otf,
+    UprightFont=*-Regular,
+    BoldFont=*-Bold,
+]{FandolSong}
 
 \setlength{\parindent}{0pt}
 \graphicspath{{../src/}}
