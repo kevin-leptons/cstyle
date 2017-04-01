@@ -16,20 +16,38 @@ PACK="$ROOT/pack"
 DOC_NAME="cstyle"
 PACKAGE="$DOC_NAME-$VERSION"
 DEST_PDF="$DEST/$DOC_NAME.pdf"
+SAMPLE_SRC="$SRC/sample"
+SAMPLE_DEST="$DEST/sample"
 
 # help menu
 HELP="USAGE:\n
-    $(basename $0) resource     generate resource
-    $(basename $0) build        build repo
-    $(basename $0) dist         build distribution
-    $(basename $0) install      install repo
-    $(basename $0) clean        clean build
-    $(basename $0) remove       remove repo
-    $(basename $0) -h           show help menu\n"
+    $(basename $0) [commands]
+
+COMMANDS
+
+    sample       build sample source code
+    run          build then open PDF result
+    view         open PDF result
+    resource     generate resource
+    build        build repo
+    dist         build distribution
+    install      install repo
+    clean        clean build
+    remove       remove repo
+    -h           show help menu\n"
+
+repo_build_sample()
+{
+    mkdir -vp $SAMPLE_DEST
+    cd $SAMPLE_DEST
+    cmake $SAMPLE_SRC
+    make
+}
 
 repo_build()
 {
     # prepare
+    repo_build_sample
     mkdir -vp $DEST
     cd $SRC
 
@@ -110,6 +128,7 @@ show_help()
 
 # parse arguments
 case "$1" in
+    sample) repo_build_sample; exit 0;;
     view) repo_view; exit 0;;
     run) repo_run; exit 0;;
     resource) repo_resource; exit 0;;
