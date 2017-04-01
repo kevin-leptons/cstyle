@@ -9,6 +9,7 @@
 \usepackage{microtype}
 \usepackage{xeCJK}
 \usepackage{caption}
+\usepackage{framed}
 
 % disable hyphens
 \tolerance=10000
@@ -43,13 +44,26 @@
 \title{C standard coding style}
 \author{Kevin Leptons}
 \date{\today}
-\newcommand{\licence}{CC by 4.0 License}
-\newcommand{\rules}{RULES}
-\newcommand{\must}{MUST}
-\newcommand{\mustnot}{MUST NOT}
-\newcommand{\can}{CAN}
-\newcommand{\good}{GOOD}
-\newcommand{\bad}{BAD}
+\newcommand{\licence}[0]{CC by 4.0 License}
+\newcommand{\must}[0]{MUST}
+\newcommand{\mustnot}[0]{MUST NOT}
+\newcommand{\can}[0]{CAN}
+\newcommand{\good}[0]{GOOD}
+\newcommand{\bad}[0]{BAD}
+\newcommand{\clang}[0]{\mbox{C-lang}}
+\newcommand{\pkgname}[0]{cstyle}
+
+\newenvironment{crules}{
+    \newcommand{\cmust}[1]{\item{MUST: ##1}}
+    \newcommand{\cnot}[1]{\item{MUST NOT: ##1}}
+    \begin{framed}
+        RULES
+        \begin{itemize}
+}{
+        \end{itemize}
+    \end{framed}
+}
+
 \makeatletter
 
 % programming language
@@ -78,11 +92,11 @@
 
     \mainmatter
         \include{chapter-language}
+        \include{chapter-files}
         \include{chapter-documents}
         \include{chapter-libraries}
         \include{chapter-command-programs}
         \include{chapter-gui-programs}
-        \include{chapter-files}
         \include{chapter-comments}
         \include{chapter-names}
         \include{chapter-preprocessors}

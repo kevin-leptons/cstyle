@@ -1,39 +1,44 @@
 \chapter{Language}
 
+\begin{crules}
+    \cmust{Use English for every things in ".h" and ".c" files}
+\end{crules}
 
-\rules{}
-\begin{itemize}
-\item
-Preprocessors, names, comments \must{} use English
-\item
-Strings \can{} use any languages
-\item
-Non English strings \must{} are explains by comments.
-\end{itemize}
+With private name strings, replace them by English pronunciations.
+For examples below:
+\begin{center}
+    \begin{tabular}{c|c}
+            Private name & Replacement \\
+            \hline
+            "Bùi Tuấn Anh" & "Bui Tuan Anh" \\
+            "長城" & "The Great Wall" \\
+    \end{tabular}
+\end{center}
 
-Why non English strings must are explains by comments ?. Because almost
-programers has experience with English but they aren't certain with
-non English languages.
+With strings which use to communicate with users, replace them by function
+calls to get it. And of course, that functions must read data from resouce
+files, doesn't use non English languages in other ".h" or ".c" files.
+For examples below:
+\begin{center}
+    \begin{tabular}{c|c}
+            Communication string & Function call \\
+            \hline
+            "Nhập một số" & trans("type-a-number", "vi") \\
+            "鍵入一個數字" & trans("type-a-number", "ch") \\
+    \end{tabular}
+\end{center}
 
-Assume that a program read a number called $x$ from stdin then then print $x^2$
-to stdout. Versions of that program shows "How to apply language rules".
+Why only English is permited in ".h" and ".c" files ?. Because almost
+programmers has English experience but they aren't certain with other
+languages. So programmers has able and are comfort when they read
+programs which written in English.
 
-\begin{figure}
-    \caption{\good{} language used}
-    \lstinputlisting{sample/src/sample/squared-num-good.c}
-\end{figure}
+If your English isn't good enough, let learn it. It take few of months
+depends on your English experience now, but after that, every things
+become awesome with you in many ways. You have able to write English,
+other programmers like that. And you have able to read programs of other
+programmers, you like that. Every one are happy.
 
-\begin{figure}
-    \caption{\bad{} language used in comments}
-    \lstinputlisting{sample/src/sample/squared-num-bad-comments.c}
-\end{figure}
-
-\begin{figure}
-    \caption{\good{} non English strings with comments}
-    \lstinputlisting{sample/src/sample/squared-num-good-strings.c}
-\end{figure}
-
-\begin{figure}
-    \caption{\bad{} non English strings without comments}
-    \lstinputlisting{sample/src/sample/squared-num-bad-strings.c}
-\end{figure}
+Language usage isn't problem of only \clang{}, it is problem of any programming
+languages. Almost coding standards of other programming languages has
+opinion same as \pkgname{}.
