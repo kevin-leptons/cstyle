@@ -1,24 +1,39 @@
 \chapter{Language}
 
-English MUST use for preprocessors, names, comments.
 
-All of languages CAN use for strings which use to communicate with users.
+\rules{}
+\begin{itemize}
+\item
+Preprocessors, names, comments \must{} use English
+\item
+Strings \can{} use any languages
+\item
+Non English strings \must{} are explains by comments.
+\end{itemize}
 
-With non English languages strings, it MUST are explains by comments.
-Why that string must explains by comments ?. Because almost other programers
-has experience with English but they aren't certain with non English languages.
+Why non English strings must are explains by comments ?. Because almost
+programers has experience with English but they aren't certain with
+non English languages.
 
 Assume that a program read a number called $x$ from stdin then then print $x^2$
-to stdout. Three versions of that program shows "How to apply language rules".
+to stdout. Versions of that program shows "How to apply language rules".
 
-Good
+\begin{figure}
+    \caption{\good{} language used}
+    \lstinputlisting{sample/src/sample/squared-num-good.c}
+\end{figure}
 
-\lstinputlisting{sample/src/sample/squared-num-good.c}
+\begin{figure}
+    \caption{\bad{} language used in comments}
+    \lstinputlisting{sample/src/sample/squared-num-bad-comments.c}
+\end{figure}
 
-Bad
+\begin{figure}
+    \caption{\good{} non English strings with comments}
+    \lstinputlisting{sample/src/sample/squared-num-good-strings.c}
+\end{figure}
 
-\lstinputlisting{sample/src/sample/squared-num-bad-comments.c}
-
-Bad
-
-\lstinputlisting{sample/src/sample/squared-num-bad-strings.c}
+\begin{figure}
+    \caption{\bad{} non English strings without comments}
+    \lstinputlisting{sample/src/sample/squared-num-bad-strings.c}
+\end{figure}

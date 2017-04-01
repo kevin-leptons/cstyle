@@ -8,6 +8,7 @@
 \usepackage{fontspec}
 \usepackage{microtype}
 \usepackage{xeCJK}
+\usepackage{caption}
 
 % disable hyphens
 \tolerance=10000
@@ -37,10 +38,18 @@
     bookmarksopenlevel=1
 }
 
+\captionsetup{singlelinecheck=false}
+
 \title{C standard coding style}
 \author{Kevin Leptons}
 \date{\today}
 \newcommand{\licence}{CC by 4.0 License}
+\newcommand{\rules}{RULES}
+\newcommand{\must}{MUST}
+\newcommand{\mustnot}{MUST NOT}
+\newcommand{\can}{CAN}
+\newcommand{\good}{GOOD}
+\newcommand{\bad}{BAD}
 \makeatletter
 
 % programming language
