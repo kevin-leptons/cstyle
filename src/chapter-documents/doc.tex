@@ -1,3 +1,15 @@
 \section{doc directory}
 
-aying that latex thinks the end of document is best is misleading. It goes to the end of the document as [h] prevents the float being placed at the top of any page [t] or on a float page [p] so most of the time it won;t fit "here" (because that point is too far down the page) so the float can not be placed anywhere so is dumped at the end as emergency error recovery
+\begin{crules}
+    \cmust{Put entry of development documents in "doc/dev.md"}
+    \cmust{Put entry of usage documents in "doc/usage.md"}
+    \cmust{Build development documents then put result in "dest/doc/dev"}
+    \cmust{Build usage documents then put result in "dest/doc/usage"}
+\end{crules}
+
+\pkgname{} doesn't specify "How structure documents", it just specify entry
+of two type of documents are \mbox{dev-doc} and \mbox{usage-doc}. So
+programmers and users easy to find documents.
+
+Programmers can usage any markdown compliers to build documents's source code 
+into various formats such as pdf, plain text or html.
