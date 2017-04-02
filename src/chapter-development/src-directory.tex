@@ -1,0 +1,30 @@
+\section{src directory}
+
+\begin{crules}
+    \cmust{Contains "include/<package-name>" directory}
+    \cmust{Contains "impl" directory}
+    \cmust{Contains "CMakeLists.txt" file}
+\end{crules}
+
+"src" directory looke like below:\\
+\dirtree{%
+.1 src/.
+.2 include/.
+.3 <package-name>/.
+.4 ....
+.2 impl/.
+.3 ....
+.2 CMakeLists.txt.
+}
+
+"include/<package-name>" contains package's ".h" files. ".h" files
+specify function's prototype, macros and scope accessing between that
+package and other packages. Structure of "include/<package-name>"
+directory is specify by programmers.
+
+"impl" directory contains packges's ".c" files. ".c" implement function's
+prototypes in ".h" files. Structure of "impl" is specify by programmers.
+"impl" and it's sub directories can contains "CMakeLists.txt".
+
+"CMakeLists.txt" file define building. That grammar is specify by cmake.
+And contents of "CMakeLists.txt" is specify by programmers.

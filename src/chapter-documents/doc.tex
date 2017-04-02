@@ -7,9 +7,17 @@
     \cmust{Build usage documents then put result in "dest/doc/usage"}
 \end{crules}
 
+"doc" directory look like below:\\
+\dirtree{%
+.1 doc/.
+.2 dev.md.
+.2 usage.md.
+.2 ....
+}
+
 \pkgname{} doesn't specify "How structure documents", it just specify entry
 of two type of documents are \mbox{dev-doc} and \mbox{usage-doc}. So
 programmers and users easy to find documents.
 
-Programmers can usage any markdown compliers to build documents's source code 
+Programmers can usage any markdown compliers to build documents's source code
 into various formats such as pdf, plain text or html.
