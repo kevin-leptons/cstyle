@@ -6,3 +6,6 @@ git rm --cached file
 
 # or remove directories
 git rm --cachged -r directory
+
+# commit changes
+git commit -am "remove unpredicted files"

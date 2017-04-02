@@ -1,6 +1,6 @@
 # CSTYLE
 
-![cstyle](src/img/cstyle-64.png)
+![cstyle](../img/cstyle-64.png)
 
 One direction guide for C language coding
 
