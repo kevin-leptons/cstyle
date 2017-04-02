@@ -1,0 +1,41 @@
+\section{Regular files}
+
+\begin{crules}
+    \cmust{Name file by regex} \verb/^[a-z0-9-]{1,16}\.[a-z0-9]{1,4}$/
+    \cmust{Use \mbox{UTF-8} encoding to file}
+    \cmust{Limit line width less than 80 characters}
+    \cmust{Indent by TAB character}
+\end{crules}
+
+File's name accept more than 16 characters, why limit it less than that?.
+Because file's name represent for file's content and 16 charaters are
+reasonable to do that. It's long enough to explain file's content and
+isn't too long to read. File extension is limit less than 4 characters for
+same principle. 4 characers is enough to explain file's type and isn't
+too long. If in the same directory, file's names are conflict, let move
+it into other directories.
+
+File's name also accept other characters than a-z, 0-9 and hyphen,
+why limit it than that?. Because it is enough to explain file's content.
+First, a-z lowercase characters uses to show main file's content.
+Second, doesn't use uppercase help file's name more clearly. It also help
+programmers write file's name under \mbox{command-line} interface more easy.
+Third, 0-9 characters uses to specify version, date and other things.
+Fourth, hyphen use to split components. No need more characters,
+it only make hard to read.
+
+\pkgname{} use ASCII characters because it only accept English, why use
+\mbox{UTF-8} encoding for files?. Because \mbox{UTF-8} is default enable by
+almost text editors. When programmers working with both ".h", ".c" and
+\mbox{UTF-8} resources files, they no need switch editor encoding between
+\mbox{UTF-8} and ASCII.
+
+Number of characters on line doesn't limit by any file system, why limit it
+less than 80 characters?. In simple, for readability. 80 characters are
+comfort to read, fit with small screen and avoid too depth nested of
+code blocks. Note that, 80 characters includes new line character,
+so maximum number of characters on text editor is 79.
+
+Why is TAB?. TAB or SPACE is infinite war between programmers so don't
+make war here. \pkgname{} choose TAB because it require one key pressed to
+indent. No talk, no war, just pick it up!.

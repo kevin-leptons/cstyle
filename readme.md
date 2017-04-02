@@ -33,7 +33,7 @@ Specification was built to PDF format and putted to [dist](dist/)
 # packages
 
 # install tools
-apt-get install texlive-xetex evince
+apt-get install texlive-xetex texlive-generic-extra evince
 
 # option tools
 # required if you modify image "src/img/*.svg"

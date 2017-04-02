@@ -1,0 +1,47 @@
+\section{Structure}
+
+\begin{crules}
+    \cmust{Have "readme.md" file}
+    \cmust{Have "license.md" file}
+    \cmust{Have "changelog.md" file}
+    \cmust{Have "doc" directory}
+    \cmust{Have "tmp" directory}
+    \cmust{Have "src" directory}
+    \cmust{Have "test" directory}
+    \cmust{Have "dest" directory}
+    \cmust{Have "dist" directory}
+    \cmust{Have ".gitignore" file}
+    \cnot{Put other files into root of package directory}
+\end{crules}
+
+In simple, file structure look like below\\
+\dirtree{%
+.1 package/.
+.2 readme.md.
+.2 license.md.
+.2 changelog.md.
+.2 tmp/.
+.2 doc/.
+.2 test/.
+.2 src/.
+.2 dest/.
+.2 dist/.
+.2 .gitignore.
+}
+
+"readme.md" file provide essential information of package. "license.md" provide
+full specifications of license which apply to package. "changelog.md" provide
+full changes of package follow development. "doc/" directory is place to put
+source code of documents, realated documents.
+It is specify in Chapter Document.
+
+"src/" directory contains source code of package. "test/" directory contains
+source code of testing. "dest/" directory contains build's file which
+created by compilers or tools. "dist/" directory contains distribute packages.
+It is specify in Chapter Building.
+
+"tmp/" directory is place to put template files. It is specify in Section
+tmp directory.
+
+".gitignore" file specify files which ignore by version system control "git".
+It is specify in Section gitignore file.

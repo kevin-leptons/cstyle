@@ -1,0 +1,16 @@
+\section{gitignore file}
+
+\begin{crules}
+    \cmust{Put "tmp/", "dest/", "dist/" into .gitignore}
+    \cmust{Put "*.swp/", "*.log" into .gitignore}
+    \cnot{Put source code files into .gitignore}
+\end{crules}
+
+In simple, put all of files aren't source code into ".gitignore" file.
+If unpredicted files was added into git, remove it from git without delete
+by instructions below:
+
+\begin{figure}[h]
+    \caption{Remove unpredicted files from git without delete}
+    \lstinputlisting[language=bash]{asset/remove-unpredicted-files-git.sh}
+\end{figure}
