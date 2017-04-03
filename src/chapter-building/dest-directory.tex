@@ -1,0 +1,22 @@
+\section{dest directory}
+
+\begin{crules}
+    \cmust{Put all of files whichs created by build tools to "dest/" directory}
+    \cmust{Put executable files into \path{dest/bin/} directory}
+    \cmust{Put library files into \path{dest/lib/} directory}
+    \cmust{Put development documents in \path{dest/doc/dev/} directory}
+    \cmust{Put usage documents in \path{dest/doc/usage} directory}
+\end{crules}
+
+Structure of "dest/" directory look like below:\\
+\dirtree{%
+.1 dest/.
+.2 bin/.
+.3 ....
+.2 lib/.
+.3 ....
+.2 doc.
+.3 dev.
+.3 usage.
+.2 ....
+}

@@ -1,0 +1,17 @@
+\section{CMakeLists.txt}
+
+\begin{crules}
+    \cmust{Specify entry of building}
+    \cmust{Specify \path{src/inc} for include directories}
+    \cmust{Specify output excutable files to \path{dest/bin}}
+    \cmust{Specify outout library files to \path{dest/lib}}
+\end{crules}
+
+"CMakeLists.txt" file defines building. That grammars is specify by cmake.
+Because header files located in "src/inc/" directory, "CMakeLists.txt" must
+contains command \path{include_directories(src/inc)} to help
+\path{#include <header>} is avaiable. \path{dest/bin/} and \path{dest/lib/}
+directory are specify for easy search. All of rest contents of "CMakeLists.txt"
+is specify by programmers.
+
+\flisting{CMakeLists.txt example}{sample/CMakeLists.txt}

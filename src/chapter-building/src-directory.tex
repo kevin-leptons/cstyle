@@ -1,0 +1,25 @@
+\section{src directory}
+
+\begin{crules}
+    \cmust{Contains "inc/<package-name>" directory}
+    \cmust{Contains "imp" directory}
+\end{crules}
+
+"src" directory looke like below:\\
+\dirtree{%
+.1 src/.
+.2 inc/.
+.3 <package-name>/.
+.4 ....
+.2 imp/.
+.3 ....
+}
+
+"inc/<package-name>" contains package's ".h" files. ".h" files
+specify function's prototype, macros and scope accessing between that
+package and other packages. Structure of "inc/<package-name>"
+directory is specify by programmers.
+
+"imp" directory contains packges's ".c" files. ".c" implement function's
+prototypes in ".h" files. Structure of "imp" is specify by programmers.
+"imp" and it's sub directories can contains "CMakeLists.txt".
