@@ -1,0 +1,17 @@
+\section{Graphical}
+
+\begin{crules}
+    \cmust{Provide only executable file name same as package start
+    graphical interface}
+    \cmust{Provide most at one dynamic library name follow regex}
+    \verb/<packge-name>[a-z0-9-_.]{16}/
+    \cmust{Doesn't provide static library}
+    \cmust{Provide \path{version} command}
+    \cmust{Provide \path{help} command to show short information about progam}
+\end{crules}
+
+Graphical program still is executable file, but it start graphical interface
+intead of working with stdin and stdout, so almost rules are same as
+command program. Difference is first rule define program start graphical
+interface and last rule define \path{help} command to show short information
+about program, not usage.

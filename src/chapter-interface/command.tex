@@ -1,0 +1,28 @@
+\section{Command}
+
+\begin{crules}
+    \cmust{Provide only executale file name same as package name}
+    \cmust{Provide at most one dynamic library name follow}
+    \verb/<package-name>[a-z0-9-_.]{16}/
+    \cmust{Doesn't provide static library}
+    \cmust{Provide command \path{version}}
+    \cmust{Provice command \path{help}}
+\end{crules}
+
+Why provide only executale file with same name as package?.
+Because it is easy for users when they installed package then they imediatly
+call it from command line.
+
+Why provide at most one dynamic library with same name of package?.
+Because that library isn't created for other program, it only serve executale
+in package. And one library serve for on executable is clear.
+
+Why doesn't provide static library?. Because if executable code is small,
+no need dynamic library, every thing putted in executable file.
+If executable code is large enough, dynamic library may give efficient
+memory. And that library isn't created for other program.
+
+Why provide \path{version} command?. For checking of command version.
+Why provide \path{help} command?. To help user get short program's manual.
+
+Implementation of program is define by programmers.

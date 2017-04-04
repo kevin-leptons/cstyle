@@ -1,0 +1,34 @@
+\section{Library}
+
+\begin{crules}
+    \cmust{Provide one static and one dynamic libarary}
+    \cmust{Doesn't provide executable files}
+    \cmust{Name library file follow regex} \verb/<pkg-name>[a-z0-9-._]{1,16}/
+\end{crules}
+
+Why provide one static and one dynamic library?. Because demand,
+other programmers can use one in two when they need. If they use few of parts
+of library, static library make small program. However, if they use almost
+parts of library, dynamic library is efficient memory and easy to update.
+Why provide only one file for each library type?. Because clearly, other
+programmers are easy to find that files.
+
+Why doesn't provide executable files?. Because package must be clear, library
+package provide "Programming Interface", doen't "User Interface".
+
+<pkg-name> is name of pacakge, follow is suffic specify mete data such as
+version, target architectures, build times. \path{_} use for compative with
+packge manager's rules. Here are examples:
+
+\begin{center}
+    \begin{tabular}{c|c}
+            File name & Is valid \\
+            \hline
+            libc.a & Yes \\
+            libcurl.so.4.3.0 & Yes \\
+            LibC.a & No
+    \end{tabular}
+\end{center}
+
+Programming Interface of libraries is parts of source code and it is specify
+in Chapter Source code.
