@@ -82,4 +82,4 @@ REFERENCES
 ==========
 
 [cstyle-start](https://github.com/kevin-leptons/cstyle-start)
-an - sample project use `cstyle`
+is an example project which uses `cstyle`
