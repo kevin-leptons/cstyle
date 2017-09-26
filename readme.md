@@ -1,4 +1,5 @@
-# CSTYLE
+CSTYLE
+======
 
 ![cstyle](src/img/cstyle-64.png)
 
@@ -8,14 +9,16 @@ Kevin Leptons <kevin.leptons@gmail.com> <br>
 CC by 4.0 License <br>
 March, 2017
 
-# FEATURES
+FEATURES
+========
 
 - Specify C coding standard
 - Developers are easy to thinking
 - Code is easy to write
 - Code is easy to read
 
-# USAGE
+USAGE
+=====
 
 ```bash
 # download pre-build packages from this directory
@@ -30,9 +33,8 @@ cd cstyle-0.1.0
 evince cstyle-0.1.0.pdf
 ```
 
-Full document: https://github.com/kevin-leptons/cstyle/doc/usage.md
-
-# DEVELOPMENT
+DEVELOPMENT
+===========
 
 ```bash
 # all of instruction below are affected by Debian-like system
@@ -75,10 +77,9 @@ cd cstyle
 # clean build files
 ./ctl clean
 ```
-Full document:
-https://github.com/kevin-leptons/cstyle/doc/dev.md
 
-# REFERENCES
+REFERENCES
+==========
 
 [cstyle-start](https://github.com/kevin-leptons/cstyle-start)
 an - sample project use `cstyle`
